@@ -4,6 +4,9 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.set('views', './views');
+app.set('view engine', 'ejs');
+
 const questions = [
   { question: "Who was the first Prime Minister of India?", answer: "Jawaharlal Nehru" },
   { question: "Who is known as the 'Father of the Nation' in India?", answer: "Mahatma Gandhi" },
@@ -104,7 +107,7 @@ let x;
 
 app.get("/", (req, res) => {
   x = getRandomQuestion();
-  res.render("index.ejs", { question: questions[x].question});
+  res.render("index", { question: questions[x].question});
 });
 
 app.use(express.static('public'));
@@ -114,10 +117,10 @@ app.post("/submit-question", (req, res) => {
   const userAnswer = req.body.answer.toLowerCase(); 
   const correctAnswer = question.answer.toLowerCase();
   if(userAnswer!=correctAnswer){
-    res.render("wrong.ejs", { answer: questions[x].answer });
+    res.render("wrong", { answer: questions[x].answer });
   }
   else{
-    res.render("right.ejs");
+    res.render("right");
   }
 });
 
@@ -130,15 +133,15 @@ app.listen(port, () => {
 });
 
 app.get("/about", (req, res) => {
-    res.render("about.ejs");
+    res.render("about");
   });
 
 app.get("/contact", (req, res) => {
-    res.render("contact.ejs");
+    res.render("contact");
 });
 
 app.get("/source-code", (req, res) => {
-  res.render("source_code.ejs");
+  res.render("source_code");
 });
 
 
