@@ -7,6 +7,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', './Views');
 app.set('view engine', 'ejs');
 
+app.use(express.static('Public'));
+
 const questions = [
   { question: "Who was the first Prime Minister of India?", answer: "Jawaharlal Nehru" },
   { question: "Who is known as the 'Father of the Nation' in India?", answer: "Mahatma Gandhi" },
@@ -109,8 +111,6 @@ app.get("/", (req, res) => {
   x = getRandomQuestion();
   res.render("index", { question: questions[x].question});
 });
-
-app.use(express.static('public'));
 
 app.post("/submit-question", (req, res) => {
   const question=questions[x];
