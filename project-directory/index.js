@@ -4,7 +4,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.set('views', './views');
+app.set('views', './Views');
 app.set('view engine', 'ejs');
 
 const questions = [
