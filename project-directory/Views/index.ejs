@@ -1,0 +1,9 @@
+<%- include("Partials/header.ejs") %>
+    <div class="container1">
+        <form action="/submit-question" method="POST">
+         <label for="question"><%=question%></label><br>
+            <input type="text" id="question" name="answer" required><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <%- include("Partials/footer.ejs") %>

@@ -1,0 +1,158 @@
+body{
+  background-color: rgb(255, 241, 223);
+}
+
+footer {
+    background-color: rgb(121, 121, 121); 
+    color: #000000; 
+    padding: 20px; 
+    text-align: center; 
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+  }
+  
+  .social-media {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-media a {
+    margin-right: 10px; 
+  }
+  
+  .social-media img {
+    width: 30px;
+    height: 30px;
+  }
+
+.container1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.container-fluid{
+  background-color: rgb(121, 121, 121);
+  width: 100%;
+}
+
+.container img{
+  border-radius: 50%;
+  outline: 2px solid white;
+}
+
+.container a{
+  color: #000000;
+}
+
+a{
+  color: rgb(0, 48, 206);
+}
+
+.container2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.about{
+  width: 60%;
+  border: 2px solid black;
+  border-radius: 10%;
+  margin-top: 10%;
+  background-color: rgb(168, 166, 166);
+}
+    
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(121, 121, 121);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.container3 {
+  border-radius: 5px;
+  background-color: rgb(168, 166, 166);
+  padding: 20px;
+}
+
+.copy_code{
+  border: 2px solid rgb(121, 121, 121);
+  width: fit-content;
+  padding-right: 20px;
+}
+
+.copy{
+  position: relative;
+  
+}
+
+.containerW{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+.containerW img{
+  height: 40px;
+  width: 40px;
+}
+
+.nextBtn{
+  display: flex;
+  justify-content: center;
+}
+
+.nextBtn input{
+  padding: 10px;
+  background-color: blue;
+  font-size: 1rem;
+  color: white;
+  border-radius: 10px;
+}
+
+.correct-answer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3{
+  color:  rgb(84, 84, 84);
+}
+
+.copy_code{
+  background-color: white;
+}
+
+.copy button{
+  background-color: rgb(143, 143, 143);
+  padding: 5px;
+  border-radius: 10px;
+}
